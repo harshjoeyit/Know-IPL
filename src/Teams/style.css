@@ -1,0 +1,11 @@
+
+.team-index {
+    background-color: beige;
+}
+
+.team-item {
+    display: inline-block;
+    margin: 3px;
+    border-radius: 3px;
+    padding: 2px;
+}
