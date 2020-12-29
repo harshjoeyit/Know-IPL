@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Mallanna&display=swap');
+@import url('//fonts.googleapis.com/css?family=Cookie');
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mallanna', Verdana, Geneva, Tahoma, sans-serif;
 }

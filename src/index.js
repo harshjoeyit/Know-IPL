@@ -12,10 +12,14 @@ import NotFound from './Error/NotFound'
 
 // Styles 
 import '../src/main.css'
+import Header from './Utils/Header';
 
 
 const routing = (
   <Router>
+    
+    <Header />
+
     <Switch>
       
       <Route

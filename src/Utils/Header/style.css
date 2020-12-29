@@ -1,0 +1,76 @@
+
+.overlay {
+    width: 100vw;
+    height: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100vw;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay span {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay span:hover,
+.overlay span:focus {
+    color: #f1f1f1;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 20;
+    transition: all 0.5s ease-in;
+}
+
+.header_black {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.logo {
+    background-image: url('../Images/logo.png');
+    background-size: cover; 
+    background-position: center center;
+    height: 50px;
+    width: 50px;
+    z-index: 30;
+}
+
+.nav-btn {
+    font-size: 25px;
+    color: wheat;
+}
+
+.banner {
+    background-image: url('../Images/banner2.png');
+    background-size: cover; 
+    background-position: center center;
+    height: 260px;
+    margin-bottom: 15px;
+    object-fit: contain;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.109);
+}
