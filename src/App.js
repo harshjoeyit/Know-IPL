@@ -46,7 +46,7 @@ const App = () => {
                       frameBorder='0'
                       allowFullScreen='allowfullscreen'
                       title="IPL-Video"
-                      src={`http://www.youtube.com/embed/${item.id.videoId}`}
+                      src={`https://www.youtube.com/embed/${item.id.videoId}`}
                       style={{
                         borderRadius: '3px',
                       }}
