@@ -7,7 +7,7 @@
     left: 0;
     overflow-y: hidden;
     z-index: 5;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color:  var(--bg-color);
     transition: 0.5s;
 }
 
@@ -23,14 +23,14 @@
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: var(--dark-blue);
     display: block;
     transition: 0.3s;
 }
 
 .overlay span:hover,
 .overlay span:focus {
-    color: #f1f1f1;
+    color: var(--blue);
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -48,7 +48,7 @@
 }
 
 .header_black {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--bg-color);
 }
 
 .logo {
@@ -60,9 +60,16 @@
     z-index: 30;
 }
 
+.navlink {
+    text-decoration: none;
+}
+
 .nav-btn {
     font-size: 25px;
-    color: wheat;
+    color: var(--dark-blue);
+}
+.nav-btn:hover {
+    cursor: pointer;
 }
 
 .banner {
@@ -72,5 +79,5 @@
     height: 260px;
     margin-bottom: 15px;
     object-fit: contain;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.109);
+    box-shadow: var(--light-box);
 }

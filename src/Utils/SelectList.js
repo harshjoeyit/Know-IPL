@@ -1,8 +1,9 @@
 
 import React, { useState, useEffect } from 'react'
 import uuid from 'react-uuid'
+import './styles.css'
 
-function SelectList({ options, parentSetState }) {
+function SelectList({ attribute, options, parentSetState }) {
 
     const [selected, setSelected] = useState('All')
 
@@ -12,7 +13,10 @@ function SelectList({ options, parentSetState }) {
     }
 
     return (
-        <div>
+        <div className="selectlist">
+            <div className="selectlist-attribute">
+                { attribute }
+            </div>
             <select
                 value={ selected }
                 onChange={(e) => { handleChange(e) }}

@@ -44,7 +44,9 @@ const Header = () => {
             <div className="overlay" ref={ overlayRef }>
                 
                 <div className={state.black ? 'header header_black' : 'header'} >
-                    <div className="logo"></div>
+                    <Link to="/">
+                        <div className="logo"></div>
+                    </Link>
                     
                     <div className="nav-btn" onClick={ handleOpenCloseNav }>  
                     {

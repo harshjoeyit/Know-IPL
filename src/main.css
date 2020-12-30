@@ -1,6 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Mallanna&display=swap');
 @import url('//fonts.googleapis.com/css?family=Cookie');
 
+:root {
+    --dark-grey: #666666;
+    --bg-color: #e6e6e6;
+    --yellow: #ffd166;
+    --pink: #ef476f;
+    --green:  #06d6a0;;
+    --blue: #118ab2;
+    --light-pruple: #7699d4;
+    --purple: #7d79cd;
+    --dark-blue: #002a32;
+
+    
+    --lightbox: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+    
+    --darkbox: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.048);
+}
 
 * {
     margin: 0;
@@ -8,6 +28,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Mallanna', Verdana, Geneva, Tahoma, sans-serif;
-}
+}   

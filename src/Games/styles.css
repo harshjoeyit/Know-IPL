@@ -1,0 +1,85 @@
+
+.game-item {
+    box-shadow: var(--lightbox);
+    width: 900px;
+    margin: 0 auto 15px auto;
+    transition: all 0.25s ease;
+    border-radius: 5px;
+    color: var(--dark-grey);
+}
+
+.game-item:hover {
+    box-shadow: var(--darkbox);
+}
+
+.game-item-row {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.game-teams, .game-result {
+    width: 50%;
+}
+
+.game-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-left: 1px var(--bg-color) solid;
+    padding-left: 5px;
+}
+
+.team {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.date, .season {
+    padding: 0 15px;
+    border-radius: 3px;
+}
+.date {
+    color: var(--blue);
+    background-color: var(--bg-color);
+}
+.season {
+    color:var(--pink);
+    background-color: var(--bg-color);
+}
+
+.game-venue {
+    justify-content: center;
+    color: var(--blue);
+    background-color: var(--bg-color);
+    padding: 0 10px;
+    border-radius: 3px;
+    margin: 10px 0 0 0;
+}
+.game-venue span {
+    margin: 3px;
+}
+
+@media only screen and (max-width: 900px) {
+    .game-item {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .game-stats {
+        flex-direction: column;
+    }
+    .game-teams, .game-result {
+        width: 100%;
+    }
+    .game-result {
+        margin-top: 10px;
+        padding-top: 10px;
+        border: none;
+        border-top: 1px var(--bg-color) solid;
+    }
+}

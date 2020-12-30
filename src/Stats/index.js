@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react'
+import uuid from 'react-uuid'
+
 // helpers 
 import { getStatsData } from '../Helpers/request'
-import { 
-    byAverage, byNumberOfBalls, 
-    byStrikeRate, byTotalRuns 
+import {
+    byAverage, byNumberOfBalls,
+    byStrikeRate, byTotalRuns
 } from '../Helpers/comparator'
+import StatsItem from './StatsItem'
 
-import uuid from 'react-uuid'
+// images
+import ball from '../Utils/Images/ball.png'
+import bat from '../Utils/Images/bat.png'
+import avg from '../Utils/Images/avg.png'
+import strike from '../Utils/Images/strike.png'
 
 
 const Stats = () => {
@@ -14,7 +21,7 @@ const Stats = () => {
     const [state, setState] = useState({ stats: [], loading: true })
 
     useEffect(() => {
-        
+
         getStatsData()
             .then(data => {
                 setState(prevState => ({
@@ -30,45 +37,65 @@ const Stats = () => {
     // handle change in sort
     const handleClick = (type) => {
         let stats = []
-        if(type === "runs") {
+        if (type === "runs") {
             stats = state.stats.sort(byTotalRuns)
-        } 
-        else if(type === "balls") {
+        }
+        else if (type === "balls") {
             stats = state.stats.sort(byNumberOfBalls)
         }
-        else if(type === "avg") {
+        else if (type === "avg") {
             stats = state.stats.sort(byAverage)
         }
-        else if(type === "strike") {
+        else if (type === "strike") {
             stats = state.stats.sort(byStrikeRate)
         }
 
         // set state 
         setState(prevState => ({
-            ...prevState, 
+            ...prevState,
             stats: stats,
         }))
     }
 
     return (
         <div>
-            <div>
-                <button onClick={() => { handleClick("runs") }} > Most Runs </button>
-                <button onClick={() => { handleClick("balls") }} >Most Balls Faced </button>
-                <button onClick={() => { handleClick("avg") }} >Best Average </button>
-                <button onClick={() => { handleClick("strike") }} >Best Strike Rate</button>
+            <div className="sorting-options">
+                <button onClick={() => { handleClick("runs") }} >
+                    <img src={bat} alt="runs " />
+                    <span>Most Runs</span>
+                </button>
+                <button onClick={() => { handleClick("balls") }} >
+                    <img src={ball} alt="balls " />
+                    <span>Most Balls Faced</span>
+                </button>
+                <button onClick={() => { handleClick("avg") }} >
+                    <img src={avg} alt="avg " />
+                    <span>Best Average</span>
+                </button>
+                <button onClick={() => { handleClick("strike") }} >
+                    <img src={strike} alt="stk rate " />
+                    <span>Best Strike Rate</span>
+                </button>
             </div>
-            {
-                (!state.loading)
-                ? (
-                    state.stats.map(item => (
-                        <p key={ uuid() }>
-                            {item.batsman} {item.total_runs} {item.average} {item.strikerate}
-                        </p>
-                    ))
-                )
-                : (<></>)
-            }
+
+            <div className="result-list">
+                {
+                    (!state.loading)
+                        ? (
+                            state.stats.map(item => (
+                                <StatsItem
+                                    key={uuid()}
+                                    batsman={item.batsman}
+                                    totalRuns={item.total_runs}
+                                    totalBalls={item.numberofballs}
+                                    average={item.average}
+                                    strikeRate={item.strikerate}
+                                />
+                            ))
+                        )
+                        : (<></>)
+                }
+            </div>
         </div>
     )
 }

@@ -1,0 +1,50 @@
+
+.selectlist {
+    background-color: var(--bg-color);
+    padding: 3px 10px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.selectlist-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0 0 15px 0;
+}
+
+.select-heading {
+    text-align: center;
+    font-size: 30px;
+}
+
+.selectlist-attribute {
+    text-align: center;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+select {
+    width: 250px;
+    height: 25px;
+    padding: 0 2px;
+    border: none;
+    outline: none;
+    background-color: var(--blue);
+    border-radius: 3px;
+    color: white;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .selectlist {
+        width: 90%;
+    }
+    select {
+        width: 100%;
+    }
+}
