@@ -45,7 +45,9 @@ const Header = () => {
                 
                 <div className={state.black ? 'header header_black' : 'header'} >
                     <Link to="/">
-                        <div className="logo"></div>
+                        <div 
+                            className="logo"
+                        ></div>
                     </Link>
                     
                     <div className="nav-btn" onClick={ handleOpenCloseNav }>  

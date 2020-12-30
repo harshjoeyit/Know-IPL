@@ -1,7 +1,7 @@
 
 .player-basic-info {
     border-radius: 5px 0 0 0 ;
-    background: linear-gradient(160deg, var(--purple), var(--light-pruple), #ffffff00, #ffffff00);
+    background: linear-gradient(160deg, var(--blue), var(--light-pruple), #ffffff00, #ffffff00);
     color: white;   
 }
 

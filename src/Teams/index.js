@@ -11,7 +11,7 @@ import TeamDetails from './TeamDetails'
 import TeamGameItem from './TeamGameItem'
 import SelectList from '../Utils/SelectList'
 import uuid from 'react-uuid'
-import { filter } from 'd3'
+
 
 const Teams = () => {
 
@@ -47,7 +47,6 @@ const Teams = () => {
     const refreshResults = async () => {
         const res = await filterTeamGames(filterState)
         setResults(res)
-        console.log(res)
     }
 
     // set options for dropdown

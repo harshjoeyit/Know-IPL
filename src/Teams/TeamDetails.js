@@ -17,7 +17,6 @@ function TeamDetails({ team }) {
     const getTeamDetails = async() => {
         const teamsData = await getTeamsData()
         const details = teamsData.find(item => item.team === team)
-        console.log(details)
         setState({
             details,
             loading: false

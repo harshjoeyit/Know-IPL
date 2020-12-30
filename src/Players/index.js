@@ -46,7 +46,6 @@ const Players = () => {
     const refreshResults = async () => {
         const res = await filterPlayers(filterState)
         setResults(res)
-        console.log(res)
     }
 
     // get options for dropdown

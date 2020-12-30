@@ -9,7 +9,6 @@ import {
 // child components 
 import SelectList from '../Utils/SelectList'
 import GameItem from './GameItem'
-import NoResults from '../Error/NoResults'
 
 
 const Games = () => {
@@ -56,7 +55,6 @@ const Games = () => {
     const refreshResults = async () => {
         const res = await filterAllGames(filterState)
         setResults(res)
-        console.log(res)
     }
 
     return (
