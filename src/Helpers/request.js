@@ -39,7 +39,7 @@ export const getVideos = async () => {
     const q = "IPL",
     baseurl = `https://www.googleapis.com/youtube/v3/search`,
     key = `AIzaSyCZy2OBsSgT6FkZbyefZbZT_-Im11dzsbs`,
-    maxResults = 1,
+    maxResults = 6,
     url = `${baseurl}?part=snippet&key=${key}&type=video&q=${q}&order=viewCount&maxResults=${maxResults}`;
 
     return await axios.get(url)
