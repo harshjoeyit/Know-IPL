@@ -1,2 +1,2 @@
-### IPL Statistics App, built with :hearts and React
+### IPL Statistics App, built with :hearts: and React
 
