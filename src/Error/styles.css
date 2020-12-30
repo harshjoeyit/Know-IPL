@@ -1,0 +1,17 @@
+
+.no-results {
+    width: 270px;
+    margin: auto;
+    color: var(--pink);
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 20px;
+    background-color: var(--bg-color);
+    border-radius: 3px;
+}
+
+.not-found {
+    text-align: center;
+    font-size: 45px;
+    color: var(--dark-blue)
+}

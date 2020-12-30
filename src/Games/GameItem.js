@@ -33,7 +33,7 @@ function GameItem({
             </div>
             <div className="game-item-row game-venue">
                 <span>
-                    <i className="fa fa-map-marker" style={{color: '#bf0a16'}} ></i>
+                    <i className="fa fa-map-marker" ></i>
                 </span>
                 <span>{ `${venue}, ${city}` }</span>
             </div>
