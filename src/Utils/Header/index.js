@@ -21,13 +21,13 @@ const Header = () => {
                 ...state,
                 black: now
             })
-		});
+        });
     }, []);
 
     const handlePageChange = () => {
         if (!state.open) {
-			handleOpenCloseNav();
-		}
+            handleOpenCloseNav();
+        }
     }
 
     const handleOpenCloseNav = () => {
@@ -41,52 +41,58 @@ const Header = () => {
 
     return (
         <>
-            <div className="overlay" ref={ overlayRef }>
-                
+            <div className="overlay" ref={overlayRef}>
+
                 <div className={state.black ? 'header header_black' : 'header'} >
                     <Link to="/">
-                        <div 
+                        <div
                             className="logo"
                         ></div>
                     </Link>
-                    
-                    <div className="nav-btn" onClick={ handleOpenCloseNav }>  
-                    {
-                        state.open 
-                        ? <i className='fa fa-bars'></i>
-                        : <i className='fa fa-times'></i>
-                    }
+
+                    <div className="nav-btn" onClick={handleOpenCloseNav}>
+                        {
+                            state.open
+                                ? <i className='fa fa-bars'></i>
+                                : <i className='fa fa-times'></i>
+                        }
                     </div>
-                
+
                 </div>
-                
+
                 <div className="overlay-content">
+                    <Link to="/">
+                        <span
+                            className="navlink"
+                            onClick={handlePageChange}
+                        >Home</span>
+                    </Link>
                     <Link to="/teams">
-                        <span 
+                        <span
                             className="navlink"
                             onClick={handlePageChange}
                         >Teams</span>
                     </Link>
                     <Link to="/games">
-                        <span 
+                        <span
                             className="navlink"
                             onClick={handlePageChange}
                         >Games</span>
                     </Link>
                     <Link to="/players">
-                        <span 
+                        <span
                             className="navlink"
                             onClick={handlePageChange}
                         >Players</span>
                     </Link>
                     <Link to="/stats">
-                        <span 
+                        <span
                             className="navlink"
                             onClick={handlePageChange}
                         >Stats</span>
                     </Link>
                 </div>
-            
+
             </div>
 
             <section className="banner">

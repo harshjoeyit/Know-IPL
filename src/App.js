@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <div className="video-results">
-      <h1 className="video-list-heading"> Recent Videos </h1>
+      <h1 className="video-list-heading"> Timeline </h1>
       <div className="video-list">
         {
           state.loading 
@@ -47,9 +47,6 @@ const App = () => {
                       allowFullScreen='allowfullscreen'
                       title="IPL-Video"
                       src={`https://www.youtube.com/embed/${item.id.videoId}`}
-                      style={{
-                        borderRadius: '3px',
-                      }}
                     ></iframe>
                   </div>
                 </div>
