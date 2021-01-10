@@ -24,4 +24,4 @@ IPL Statistics App
 <img src="images/one.png" width="100%">
 <img src="images/three.png" width="100%">
 <img src="images/four.png" width="100%">
-<img src="images/two.png" width="100%">
+<img src="images/two.png" width="40%">
