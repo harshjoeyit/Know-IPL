@@ -1,4 +1,4 @@
-### KnowIPL
+# KnowIPL
 IPL Statistics App
 
 ### Live at [KnowIPL](https://know-ipl.herokuapp.com/)
